@@ -1,10 +1,6 @@
 import Head from "next/head";
-
-import {
-  useStoryblokState,
-  getStoryblokApi,
-  StoryblokComponent,
-} from "@storyblok/react";
+import { useStoryblokState, getStoryblokApi } from "@storyblok/react";
+import TwoColumnTextSection from "../components/TwoColumnTextSection";
 
 export default function Home({ story }) {
   story = useStoryblokState(story);
@@ -15,7 +11,8 @@ export default function Home({ story }) {
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <StoryblokComponent blok={story.content} />
+      {/* Replace StoryblokComponent with TwoColumnTextSection */}
+      <TwoColumnTextSection />
     </div>
   );
 }
